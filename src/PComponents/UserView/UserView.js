@@ -7,7 +7,6 @@ function UserView({ userData, fetchApiData }) {
 		fetchApiData();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
-	console.log("==>==>==>==>==>==> ");
 	console.log(userData.data);
 	return userData.loading ? (
 		<h2>Loading</h2>
@@ -18,8 +17,10 @@ function UserView({ userData, fetchApiData }) {
 			<h2>Users' List</h2>
 			<div>
 				{userData &&
-				userData.data &&
-				userData.data.map((user) => <p key={user.id}>{user.name}</p>)}
+					userData.data &&
+					userData.data.map((member) => 
+				<div key={member.id}>{member.real_name} {member.id} {member.tz}</div>
+					)}
 			</div>
 		</div>
 	);

@@ -9,9 +9,9 @@ export const fetchApiData = () => {
 	return (dispatch) => {
 		dispatch(fetchUsersRequest());
 		axios
-			.get("https://jsonplaceholder.typicode.com/users")
+			.get("http://mock-api-server-py-flask.herokuapp.com/api/v1.0/resources/users/all")
 			.then((response) => {
-				const users = response.data;
+				const users = response.data.members;
 				dispatch(fetchUsersSuccess(users));
 			})
 			.catch((error) => {
