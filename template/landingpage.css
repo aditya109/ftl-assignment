@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed&family=Russo+One&display=swap");
+:root {
+  --mainText: aliceblue;
+  --mainColor: #111111;
+  --secondaryText: #bebebe;
+  --secondaryColor: #e50000;
+  --themeDotBorder: white;
+  --borderColor: #c1c1c1;
+  --tertiaryText: #c4c4c4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: var(--mainText);
+  background-color: var(--mainText);
+}
+
+h1,
+h2,
+u,
+strong {
+  font-weight: 400;
+  font-family: "Russo One", sans-serif;
+  color: var(--secondaryColor);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p,
+span,
+label {
+  font-family: "Montserrat", sans-serif;
+  color: aliceblue;
+}
+
+body {
+  -webkit-transition: smooth;
+  transition: smooth;
+}
+
+body .container {
+  border-top: 20px solid var(--secondaryColor);
+  border-bottom: 20px solid var(--secondaryColor);
+  height: 100vh;
+  width: auto;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  body .container .container {
+    width: 95%;
+  }
+}
+/*# sourceMappingURL=landingpage.css.map */
