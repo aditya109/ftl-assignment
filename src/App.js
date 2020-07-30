@@ -4,14 +4,14 @@ import { Provider } from "react-redux";
 import "./App.css";
 // import LandingPage from "./PComponents/LandingPage/LandingPage";
 import UserView from "./PComponents/UserView/UserView";
-import CalenderDisplay from "./PComponents/Calender/CalenderDisplay";
+import Calendar from "./PComponents/Calendar/Calendar";
 
 function App() {
 	return (
 		<Provider store={store}>
 			<div className="App">
 				{/* <UserView /> */}
-				<CalenderDisplay/>
+				<Calendar/>
 			</div>
 		</Provider>
 	);
