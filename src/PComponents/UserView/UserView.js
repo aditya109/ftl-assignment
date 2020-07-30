@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./userview.css";
+import CardComponent from "../CardComponent/CardComponent";
+import Calendar from "../Calendar/Calendar";
+
 function UserView() {
+	const [showCalendar, setshowCalendar] = useState(false);
 	return (
 		<div className="main-wrapper">
 			<div className="title-wrapper">
@@ -16,20 +20,54 @@ function UserView() {
 						</tr>
 					</thead>
 					<tbody>
-						<tr className="table-hover">
+						<tr
+							data-toggle="modal"
+							data-target=".bd-example-modal-lg"
+							className="table-hover"
+						>
 							<td>Egon Spengler</td>
 							<td>W012A3CDE</td>
 							<td>America/Los_Angeles</td>
-						</tr>
-						<tr className="table-hover">
-							<td>Danyl Moore</td>
-							<td>W074WA3X6</td>
-							<td>America/Los_Angeles</td>
-						</tr>
-						<tr className="table-hover">
-							<td>Saoirse Flores</td>
-							<td>W0E21TJ2H</td>
-							<td>America/Los_Angeles</td>
+							<div
+								class="modal fade bd-example-modal-lg"
+								tabindex="-1"
+								role="dialog"
+								aria-labelledby="myLargeModalLabel"
+								aria-hidden="true"
+							>
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">
+												Periods of Activity
+											</h5>
+											<button
+												type="button"
+												class="close"
+												data-dismiss="modal"
+												aria-label="Close"
+											>
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											{/* <CardComponent /> */}
+											<div className="btn-wrapper">
+												<button
+													onClick={() => setshowCalendar(false)}
+													className="add-event-button"
+												>
+													<span className="add-event-button__title">
+														View All Days{" "}
+														<i className="fas fa-calendar-week"></i>
+													</span>
+												</button>
+											</div>
+											{showCalendar ? <Calendar /> : ""}
+										</div>
+									</div>
+								</div>
+							</div>
 						</tr>
 					</tbody>
 				</table>

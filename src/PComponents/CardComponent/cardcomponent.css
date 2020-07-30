@@ -6,6 +6,7 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;
 font-family: 'Russo One', sans-serif;
  */
+
 :root {
 	--mainText: white;
 	--mainColor: #111111;
@@ -15,46 +16,19 @@ font-family: 'Russo One', sans-serif;
 	--borderColor: #c1c1c1;
 	--tertiaryText: #c4c4c4;
 }
-html {
-	box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
-* {
-	outline: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-	margin-block-start: 0;
-	margin-block-end: 0;
-	margin-inline-start: 0;
-	margin-inline-end: 0;
-}
-
 .mobile-wrapper {
 	background: linear-gradient(
 		to bottom,
 		#ffffff,
 		#6b6b6b
 	); /* relative with .today-box::before*/
-	z-index: 1; /*positive*/
+	z-index: 1;
 	position: relative;
-	/*---------*/
 	width: 380px;
 	min-height: fit-content;
-	margin: auto;
-	/* padding: 10px 0 20px; */
+	margin: 0 auto;
 	border-radius: 10px;
-	box-shadow: 0px 10px 30px -10px #000;
+	box-shadow: 0px 10px 30px -4px #000;
 	overflow: hidden;
 }
 
@@ -94,14 +68,26 @@ header > .modal-container::after {
 header > .modal-container > h3 > span {
 	font-family: "Roboto Condensed", sans-serif;
 	font-weight: 500;
-	text-transform: uppercase;
+	text-transform: capitalize;
+	font-size: 25px;
+	margin: 0;
+	color: #111111;
 }
 
 header > .modal-container > h1 > span {
 	color: #444;
 	font-family: "Roboto", sans-serif;
-	font-size: 30px;
+	font-size: 35px;
 	font-weight: 600;
+	margin: 0;
+}
+header > .modal-container > h5 > span {
+	color: #111111;
+	font-weight: 200;
+}
+header > .modal-container > h4 > span {
+	color: #111111;
+	font-weight: 200;
 }
 #real-name {
 }
@@ -134,7 +120,7 @@ section {
 	content: "";
 	background: linear-gradient(to right, var(--secondaryColor), #910000);
 	opacity: 0.4;
-	z-index: -1;
+	z-index: -100;
 	display: block;
 	width: 100%;
 	height: 40px;
@@ -147,7 +133,7 @@ section {
 	box-shadow: 0px 0px 40px 0 var(--secondaryColor);
 }
 
-.breadcrumb {
+.breadcrumb-text {
 	font-weight: 377;
 	font-size: 17px;
 }
@@ -172,17 +158,13 @@ section {
 }
 
 .date-title {
-    color: rgb(44, 44, 44);
+    color: var(--mainText);
 	font-weight: 500;
 	font-size: 25px;
 }
 
 /* ================Events============== */
 
-.events {
-}
-.events > .event-container {
-}
 .events > .event-container > h3 {
 	color: #333;
 	font-size: 17px;
@@ -204,6 +186,8 @@ section {
 
 .event {
 	padding-left: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	height: 4vh;
@@ -231,34 +215,9 @@ section {
 	font-size: 20px;
 	font-weight: 500;
 }
-h4 > span {
+.time > h4 > span {
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
 	font-size: 18px;
 	font-style: italic;
-}
-
-.add-event-button {
-	display: flex;
-	align-items: center;
-	margin-left: auto;
-	border: 0;
-	padding: 1em;
-	background: linear-gradient(to right, var(--secondaryColor), #910000);
-	border-radius: 50px;
-	cursor: pointer;
-	box-shadow: 0px 0px 40px -9px var(--secondaryColor);
-}
-.add-event-button:active {
-	position: relative;
-	top: 2px;
-	left: 2px;
-}
-.add-event-button__title {
-	color: #fff;
-	padding: 0 18px 0 23px;
-	text-shadow: 0px 0px 5px rgba(#000, 0.2);
-	font-family: "Roboto Condensed", sans-serif;
-	font-size: 20px;
-	font-weight: 400;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./landingpage.css";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
 	return (
@@ -25,12 +26,14 @@ function LandingPage() {
 			</div>
 			<div className="right-column">
 				<div className="view-btn-wrapper">
-					<button className="view-users-button">
-						<span className="view-users-button__title">
-							View All Users &nbsp;&nbsp;
-							<i className="fas fa-calendar-week"></i>
-						</span>
-					</button>
+					<Link to="/userview">
+						<button className="view-users-button">
+							<span className="view-users-button__title">
+								View All Users &nbsp;&nbsp;
+								<i class="fas fa-user-friends"></i>
+							</span>
+						</button>
+					</Link>
 				</div>
 				<div className="img-placeholder"></div>
 			</div>

@@ -108,9 +108,7 @@ body {
   align-self: center;
   justify-self: center;
 }
-button {
-  outline:none;
-}
+
 .add-event-button {
 
 	border: 0;

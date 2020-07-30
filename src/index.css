@@ -14,3 +14,8 @@ code {
 html {
 	box-sizing: border-box;
 }
+button,
+div {
+	outline: none;
+	outline-color: transparent;
+}

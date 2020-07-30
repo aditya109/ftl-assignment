@@ -1,24 +1,21 @@
 import React from "react";
-import "./modal.css";
+import "./cardcomponent.css";
 
-function Modal() {
+function CardComponent() {
 	return (
 		<div className="mobile-wrapper">
 			{/* <!-- Header --> */}
 			<header className="header">
 				<div className="modal-container">
-					<h3>
-						<span>Activity Period</span>
-					</h3>
 					<h1>
 						<span id="real-name">Egon Spengler</span>
 					</h1>
-					<h1>
+					<h4>
 						<span id="id">W012A3CDE</span>
-					</h1>
-					<h1>
+					</h4>
+					<h5>
 						<span id="tz">America/Los_Angeles</span>
-					</h1>
+					</h5>
 				</div>
 			</header>
 
@@ -26,7 +23,7 @@ function Modal() {
 			<section className="today-box" id="today-box">
 				<div className="today-text">
 					<h3>
-						<span className="breadcrumb">Today</span>
+						<span className="breadcrumb-text">Today</span>
 					</h3>
 				</div>
 				<div className="clock-icon">
@@ -64,15 +61,11 @@ function Modal() {
 							</div>
 						</div>
 					</div>
-					<button className="add-event-button">
-						<span className="add-event-button__title">
-							View All Days <i className="fas fa-calendar-week"></i>
-						</span>
-					</button>
+					
 				</div>
 			</section>
 		</div>
 	);
 }
 
-export default Modal;
+export default CardComponent;
